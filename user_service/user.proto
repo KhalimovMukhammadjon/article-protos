@@ -3,6 +3,8 @@ syntax="proto3";
 package user_service;
 option go_package = "genproto/user_service";
 
+import "google/protobuf/struct.proto";
+
 message User{
     string id = 1; 
     string first_name = 2;
@@ -34,4 +36,9 @@ message GetAllUserResponse{
 
 message UpdateUserRequest{
    User user = 1;
+}
+
+message UpdatePatchUser {
+    string id = 1;
+    google.protobuf.Struct fields = 2;
 }

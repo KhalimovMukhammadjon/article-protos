@@ -12,4 +12,5 @@ service UserService{
     rpc GetAll(GetAllUserRequest) returns(GetAllUserResponse);
     rpc Delete(PrimaryKey) returns(google.protobuf.Empty);
     rpc Update(UpdateUserRequest) returns(google.protobuf.Empty);
+    rpc UpdatePatch(UpdatePatchUser) returns (User) {};
 }
